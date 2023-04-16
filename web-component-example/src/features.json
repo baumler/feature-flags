@@ -1,0 +1,8 @@
+{
+    "local": [
+        {
+            "key": "test-banner",
+            "active": false
+        }
+    ]
+}

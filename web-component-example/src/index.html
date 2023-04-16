@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Feature Flag - Web Component</title>
+    <script src="https://unpkg.com/@webcomponents/webcomponentsjs@^2/webcomponents-bundle.js"></script>
+</head>
+
+<body>
+<noscript>
+    <strong>We're sorry but web-component-example doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+</noscript>
+<div id="app">
+    <div class="app-banner-empty">
+        Banner flag is set to "true" so it is hidden
+    </div>
+
+    <flagged-feature flag="test-banner">
+        <div slot="feature">
+            <div class="app-banner">
+                BANNER -- Flag is set to "false" so you see me!
+            </div>
+        </div>
+    </flagged-feature>
+
+    <div class="app-content">
+        <div class="centered">
+            <h1>React Feature Flag</h1>
+
+            <div class="logos">
+                <svg viewBox="0 0 197 211">
+                    <use href="assets/logo.svg#logo" />
+                </svg>
+                <svg viewBox="0 0 197 211">
+                    <use href="assets/logo.svg#logo" />
+                </svg>
+            </div>
+        </div>
+
+        <hr/>
+
+        <div class="center-left">
+            <p>To toggle the feature flag:</p>
+
+            <ul>
+                <li>Open <code>src/features.json</code></li>
+                <li>Change <code>active</code></li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>&copy; <span data-js="year"></span> Tyler Baumler</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,100 @@
+:root {
+  --derby-shire: #245E36; /* dark green */
+  --eco-green: #68A678; /* light green */
+  --high-reflective-white: #F7F7F1; /* white */
+  --tricorn-black: #2F2F30; /* black */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+body {
+  height: 100vh;
+  color: var(--high-reflective-white);
+  background-color: var(--derby-shire);
+}
+
+.app {
+  position: relative;
+  padding: 0 80px;
+}
+
+.app-banner,
+.app-banner-empty {
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+.app-banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: var(--tricorn-black);
+  background: var(--high-reflective-white);
+}
+
+.app-banner-empty {
+  color: var(--high-reflective-white);
+  background: var(--derby-shire);
+}
+
+.app-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+}
+
+.centered {
+  text-align: center;
+}
+
+.logos {
+  display: flex;
+  justify-content: space-around;
+}
+
+.logos > :first-child {
+  transform: scaleX(-1);
+}
+
+h1 {
+  line-height: 3;
+  font-size: calc(20px + 3vmin);
+}
+
+svg {
+  width: 200px;
+  height: 200px;
+  fill: var(--tricorn-black);
+}
+
+hr {
+  border-color: var(--tricorn-black);
+  width: 100%;
+}
+
+.center-left {
+  margin: 0 auto;
+  font-size: calc(10px + 1.5vmin);
+}
+
+p {
+  margin: 0;
+}
+
+footer {
+  margin-top: 40px;
+  padding: 24px 0;
+  text-align: center;
+  color: var(--high-reflective-white);
+  box-shadow: 0 0 6px -1px var(--tricorn-black);
+}
